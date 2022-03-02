@@ -38,24 +38,25 @@ public class App
         // try with resources
         try( Connection conn = DriverManager.getConnection(url + dbName, userName, password) )
         {
-
             System.out.println("\nConnected to the database.");
 
             // Statements allow us to issue SQL queries to the database
             Statement statement = conn.createStatement();
 
-            // Result set stores the result from the SQL query
-            ResultSet resultSet = statement.executeQuery("select * from Customers");
+            // ResultSet stores the result from the SQL query
+            String sqlQuery = "select * from customers";
+            ResultSet resultSet = statement.executeQuery( sqlQuery );
 
             // Iterate over the resultSet to process every row
             while ( resultSet.next() )
             {
                 // Columns can be identified by column name or by number
-                // The first column is number 1
-                // e.g. resultSet.getString(2);
+                // The first column is number 1   e.g. resultSet.getString(2);
+
                 int customerId = resultSet.getInt("custID");
                 String firstName = resultSet.getString("firstName");
-                String lastName = resultSet.getString(3);  // get third value, i.e lastName
+
+                String lastName = resultSet.getString(3);  // get third value using index, i.e lastName
                 Date dob = resultSet.getDate("dob");
 
                 System.out.print("Customer ID = " + customerId + ", ");
