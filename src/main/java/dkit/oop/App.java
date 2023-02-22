@@ -1,7 +1,10 @@
 package dkit.oop;
 /**
  * Connect to Database and execute embedded SELECT Query.
- * Required: Table "Customers", with fields: custID, firstName, lastName, dob
+ * Required: 
+ * You MUST Start the MySql Server (from XAMPP) and create and populate the table "Customers", 
+ *  with fields: custID, firstName, lastName, dob
+ * The SQL code is given below (and is available in text file format on Moodle)
  *
  *
  DROP TABLE IF EXISTS customers;
@@ -10,7 +13,7 @@ CREATE TABLE customers(custID int NOT NULL AUTO_INCREMENT,
              firstName VARCHAR(20),
              lastName VARCHAR(50),
              dob date,
-			 PRIMARY KEY (custID));
+	PRIMARY KEY (custID));
 
 INSERT INTO customers VALUES (101, 'Tom', 'Brady', '2018-11-11' );
 INSERT INTO customers VALUES (107, 'Mary', 'Reilly', '2019-6-12');
