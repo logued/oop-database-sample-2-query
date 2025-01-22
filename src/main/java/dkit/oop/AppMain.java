@@ -22,11 +22,11 @@ package dkit.oop;           // Jan 2025
 
 import java.sql.*;
 
-public class App
+public class AppMain
 {
     public static void main(String[] args) {
-        App app = new App();
-        app.start();
+        AppMain appMain = new AppMain();
+        appMain.start();
     }
     public void start()  {
         System.out.println("MySQL - Example 2: Connect to Database and execute a 'raw' SELECT Statement");
