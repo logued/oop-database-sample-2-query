@@ -80,3 +80,13 @@ public class App
         }
     }
 }
+
+///TODO Q1.
+/// Q1. Inside the while loop, modify the code so that only rows that have first names
+/// with length greater than four characters are displayed.
+/// Execute your code and check that it works correctly.
+
+///TODO Q2.
+/// Modify the SQL query so that it retrieves only rows that have a last name
+/// beginning with the letter 'R'.
+/// Execute your code and check that it gives back the correct two records.
