@@ -59,12 +59,12 @@ public class AppMain
                 // Columns can be identified by column name OR by number
                 // The first column is number 1   e.g. resultSet.getString(1);
 
-                int customerId = resultSet.getInt("custID");
-                String firstName = resultSet.getString("firstName");
+                int customerId = resultSet.getInt("CUSTOMER_ID");
+                String firstName = resultSet.getString("FIRST_NAME");
                 // resultSet.getXXX methods must match by type.
                 // ie. getInt() for INTEGER columns etc.
                 String lastName = resultSet.getString(3);  // get third value using index, i.e lastName
-                Date dob = resultSet.getDate("dob");
+                Date dob = resultSet.getDate("DATE_OF_BIRTH");
 
                 System.out.print("Customer ID = " + customerId + ", ");
                 System.out.print("First Name = " + firstName + ", ");
